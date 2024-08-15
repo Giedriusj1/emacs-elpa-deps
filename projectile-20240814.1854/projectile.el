@@ -2072,7 +2072,17 @@ project-root for every file."
                       ((bound-and-true-p ivy-mode)  'ivy)
                       (t 'default))
                    projectile-completion-system)
-            ('default (completing-read prompt choices nil nil initial-input))
+            ('default (completing-read prompt (lambda (string pred action)
+                                                (cond
+                                                 ;; this metadata is used by
+                                                 ;; packages like marginalia and
+                                                 ;; embark to enhance how they
+                                                 ;; present candidates
+                                                 ((eq action 'metadata)
+                                                  '(metadata . ((category . file))))
+                                                 (t
+                                                  (complete-with-action action choices string pred))))
+                                       nil nil initial-input))
             ('ido (ido-completing-read prompt choices nil nil initial-input))
             ('helm
              (if (and (fboundp 'helm)
@@ -2503,9 +2513,10 @@ With a prefix arg INVALIDATE-CACHE invalidates the cache first."
 Parameters MODE VARIABLE VALUE are passed directly to `add-dir-local-variable'."
   (let ((inhibit-read-only t)
         (default-directory (projectile-acquire-root)))
-    (add-dir-local-variable mode variable value)
-    (save-buffer)
-    (kill-buffer)))
+    (save-selected-window
+      (add-dir-local-variable mode variable value)
+      (save-buffer)
+      (kill-buffer))))
 
 ;;;###autoload
 (defun projectile-delete-dir-local-variable (mode variable)
@@ -2515,9 +2526,10 @@ Parameters MODE VARIABLE VALUE are passed directly to
 `delete-dir-local-variable'."
   (let ((inhibit-read-only t)
         (default-directory (projectile-acquire-root)))
-    (delete-dir-local-variable mode variable)
-    (save-buffer)
-    (kill-buffer)))
+    (save-selected-window
+      (delete-dir-local-variable mode variable)
+      (save-buffer)
+      (kill-buffer))))
 
 
 ;;;; Sorting project files
