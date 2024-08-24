@@ -2060,13 +2060,10 @@ prompt for the name of the new tag using the highest existing
 tag as initial input and leaving it to the user to increment the
 desired part of the version string.
 
-If `--annotate' is enabled, then prompt for the message of the
-new tag.  Base the proposed tag message on the message of the
-highest tag, provided that that contains the corresponding
-version string and substituting the new version string for that.
-Otherwise propose something like \"Foo-Bar 1.2.3\", given, for
-example, a TAG \"v1.2.3\" and a repository located at something
-like \"/path/to/foo-bar\".
+When creating an annotated tag, prepare a message based on the message
+of the highest existing tag, provided that contains the corresponding
+version string, and substituting the new version string for that.  If
+that is not the case, propose a message using a reasonable format.
 
 (fn TAG MSG &optional ARGS)" t)
 (register-definition-prefixes "magit-tag" '("magit-"))
