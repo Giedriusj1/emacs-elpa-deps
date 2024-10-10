@@ -6,7 +6,8 @@
 ;; Homepage: https://github.com/shaneikennedy/npm.el
 ;; Package-Requires: ((emacs "25.1") (transient "0.1.0") (jest "20200625"))
 ;; Keywords: tools
-;; Version: 0
+;; Package-Version: 20220428.927
+;; Package-Revision: 6eb0a5827487
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

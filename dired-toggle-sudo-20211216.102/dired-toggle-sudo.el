@@ -3,6 +3,8 @@
 ;; Copyright © 2011 Sebastien Gross <seb•ɑƬ•chezwam•ɖɵʈ•org>
 
 ;; Author: Sebastien Gross <seb•ɑƬ•chezwam•ɖɵʈ•org>
+;; Package-Version: 20211216.102
+;; Package-Revision: 9f86cdf85822
 ;; Keywords: emacs, dired
 ;; Created: 2011-07-06
 ;; Last changed: 2020-04-01 15:52:40

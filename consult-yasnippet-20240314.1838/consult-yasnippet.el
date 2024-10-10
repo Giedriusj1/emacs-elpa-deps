@@ -4,7 +4,8 @@
 
 ;; Author: mohsin kaleem <mohkale@kisara.moe>
 ;; Package-Requires: ((emacs "27.1") (yasnippet "0.14") (consult "0.16"))
-;; Version: 0.2
+;; Package-Version: 20240314.1838
+;; Package-Revision: 834d39acfe8a
 ;; URL: https://github.com/mohkale/consult-yasnippet
 
 ;; This program is free software; you can redistribute it and/or modify

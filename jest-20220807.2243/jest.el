@@ -1,7 +1,8 @@
 ;;; jest.el --- helpers to run jest -*- lexical-binding: t; -*-
 ;; Author: Edmund Miller <edmund.a.miller@gmail.com>
 ;; URL:  https://github.com/emiller88/emacs-jest/
-;; Version: 0.1.0
+;; Package-Version: 20220807.2243
+;; Package-Revision: c8145635c54b
 ;; Keywords: jest, javascript, testing
 ;; Package-Requires: ((emacs "24.4") (dash "2.18.0") (magit-popup "2.12.0") (projectile "0.14.0") (s "1.12.0") (js2-mode "20180301") (cl-lib "0.6.1"))
 

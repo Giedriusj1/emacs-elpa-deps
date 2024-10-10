@@ -1,12 +1,10 @@
-(define-package "multiple-cursors" "20240223.1134" "Multiple cursors for Emacs."
+;; -*- no-byte-compile: t; lexical-binding: nil -*-
+(define-package "multiple-cursors" "20240223.1134"
+  "Multiple cursors for Emacs."
   '((cl-lib "0.5"))
-  :commit "c870c18462461df19382ecd2f9374c8b902cd804" :authors
-  '(("Magnar Sveen" . "magnars@gmail.com"))
-  :maintainer
-  '("Magnar Sveen" . "magnars@gmail.com")
-  :keywords
-  '("editing" "cursors")
-  :url "https://github.com/magnars/multiple-cursors.el")
-;; Local Variables:
-;; no-byte-compile: t
-;; End:
+  :url "https://github.com/magnars/multiple-cursors.el"
+  :commit "c870c18462461df19382ecd2f9374c8b902cd804"
+  :revdesc "c870c1846246"
+  :keywords '("editing" "cursors")
+  :authors '(("Magnar Sveen" . "magnars@gmail.com"))
+  :maintainers '(("Magnar Sveen" . "magnars@gmail.com")))
